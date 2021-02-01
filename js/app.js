@@ -29,17 +29,17 @@ function sendEmail(e){
       const spinner = document.querySelector('#spinner');
       spinner.style.display = 'block';
       //show the iamge
-      const sendEmailIng = document.createElement('img');
-      sendEmailIng.src = 'img/mail.gif';
-      sendEmailIng.style.display = 'block';
+      const sendEmailImg = document.createElement('img');
+      sendEmailImg.src = 'img/mail.gif';
+      sendEmailImg.style.display = 'block';
       //hide the spinner then display the email check
       setTimeout(function(){
           spinner.style.display = "none"; 
-          document.querySelector('#loaders').appendChild(sendEmailIng);
+          document.querySelector('#loaders').appendChild(sendEmailImg);
            //after 5sec reset the form
             setTimeout(function(){
                  sendEmailForm.reset();
-                 sendEmailIng.remove();
+                 sendEmailImg.remove();
             })
       },3000);
 }
@@ -85,6 +85,4 @@ function validateEmail(field){
           field.classList.add("errors");
      }
 }
-function resetForm(){
-     sendEmailForm.reset();
-}
+
